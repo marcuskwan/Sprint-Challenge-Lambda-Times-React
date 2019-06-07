@@ -1,13 +1,10 @@
 import React from "react";
 import Tab from "./Tab";
+import PropTypes from "prop-types";
+
 class Tabs extends React.Component {
   state = {
     selectedTab: ""
-  };
-  selectTabHandler = tabString => {
-    this.setState({
-      selectedTab: tabString
-    });
   };
   render() {
     return (
@@ -21,8 +18,8 @@ class Tabs extends React.Component {
             <>
               <Tab
                 tab={tabString}
-                selectTabHandler={this.selectTabHandler}
-                selectedTab={this.state.selectedTab}
+                selectTabHandler={this.props.selectTabHandler}
+                selectedTab={this.props.selectedTab}
               />
             </>
           ))}
@@ -33,4 +30,10 @@ class Tabs extends React.Component {
 }
 
 // Make sure to use PropTypes to validate your types!
+Tabs.propTypes = {
+  tabs: PropTypes.arrayOf(PropTypes.string),
+  selectTabHandler: PropTypes.func,
+  selectedTab: PropTypes.string
+};
+
 export default Tabs;
