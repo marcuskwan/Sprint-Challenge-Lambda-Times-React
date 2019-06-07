@@ -28,10 +28,16 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
-- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
-- [ ] Describe a life-cycle event in React?
-- [ ] Explain the details of a Higher Order Component?
-- [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+x- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+PropTypes are used for checking the type of data thats being passed down as props. It's really important to be able to spot any errors that you're passing down as props, because they can help you identify if the data that's being passed down is the data you want. As I never fully appreciated it today, when it helped me realize I was using a map function instead of a filter function and so was able to complete the task! 
+x- [ ] Describe a life-cycle event in React?
+Life cycle events are the methods you are able to use in classes or components. They execute in a timeline of: constructor > render > componentDidMount, and when there is a new prop being passed down or when setState is triggered, it renders > componentDidUpdate
+x- [ ] Explain the details of a Higher Order Component?
+A higher order component is a function that takes in a component and returns a new component. The way we've been using it so far is to accept 2 components, and choose which one to render based on whether a key exists in localStorage or state.
+x [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+We can style components by CSS or vanilla CSS. In this project we see in index.js that we've imported our index.css file there. Benefits: Clear distinguishing between components and styling. 
+We can style components by using Bootstrap or react strap. You import the line of code which lets you get their library. Importing named components from that 'reactstrap' library lets you use preset styles they've built for you, so when you use them they look good.
+We can also use Styled components, which is a library for writing CSS in JS. Benefits: Code looks cleaner because we can import Components that have a styled div (or other element) tag on them. This means we can forego class names. This results in semantic looking code instead of div className="example" and we can refer to our "CSS" in our styled components JS file.
 
 ## Project Setup
 
@@ -44,7 +50,7 @@ x- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 x- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 x- [ ] Push commits: git push origin `<firstName-lastName>`.
 x- [ ] From within the `lambdatimes` folder run `yarn` and then `yarn start`. This will open your locally hosted application in your browser. Once you are ready move onto the next steps.
-- [ ] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
+x- [ ] Inside the `Content` folder you will find all 5 components that make up the content of the application. The flow goes like this: `Content > Tabs > Tab` and `Content > Cards > Card`. Follow the directions in the `Content` component to get your data ready.
 
 Follow these steps for completing your project.
 
@@ -56,8 +62,8 @@ x- [ ] Your project manager will count the project as complete by merging the br
 
 x- [ ] Go through the `Tabs`, `Tab`, `Cards`, and `Card` components following the instructions, and passing data and props to get the tabs and cards to appear on the screen.
 x- [ ] Once the Tabs and Cards are rendering to the screen complete the `changeSelected` and `filterCards` functions in the `Content` component.
-- [ ] You should now be able to filter cards using your tabs!
-- [ ] Make sure all of your props being passed are validated using PropTypes.
+x- [ ] You should now be able to filter cards using your tabs!
+x- [ ] Make sure all of your props being passed are validated using PropTypes.
 - [ ] Find the `TopBar` and `Header` components. Convert these two components to Styled Components. You should not have any `className` props when you are finished.
 
 ## Stretch Challenge
