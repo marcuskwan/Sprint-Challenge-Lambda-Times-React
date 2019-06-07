@@ -1,10 +1,10 @@
 import React from "react";
 import {
-  TopBarDiv,
+  TopBarWrapper,
   Container,
   ContainerLeft,
   ContainerCenter,
-  ContainerRight,
+  ContainerRight
 } from "../CSS/TopBarStyledComponents";
 
 // Refactor this component to use styled components and not classNames.
@@ -12,7 +12,7 @@ import {
 
 const TopBar = () => {
   return (
-    <TopBarDiv>
+    <TopBarWrapper>
       <Container>
         <ContainerLeft>
           <span>TOPICS</span>
@@ -28,8 +28,8 @@ const TopBar = () => {
         <ContainerRight>
           <span>LOG IN</span>
         </ContainerRight>
-        </Container>
-    </TopBarDiv>
+      </Container>
+    </TopBarWrapper>
   );
 };
 
